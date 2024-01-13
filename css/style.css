@@ -1,0 +1,327 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+/* Body */
+body {
+  background-color: white;
+  font-family: "Oswald", cursive;
+  margin: 30px;
+}
+/* Img responsif */
+img {
+  max-width: 100%;
+}
+/* Container */
+.container {
+  background-color: #ddd;
+  display: grid;
+  gap: 5px;
+}
+/* Header berupa gambar/image */
+.header {
+  font-family: "Oswald", "Arial Narrow", sans-serif;
+  display: grid;
+  grid-template-areas:
+    "f1 f3 h h"
+    "f2 f4 h h";
+}
+/* Content dan sidebar */
+.contents-sidebar {
+  display: grid;
+  border-top: 2px solid whitesmoke;
+  border-bottom: 2px solid whitesmoke;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "ctn sdb"
+    "ctn sdb";
+}
+.content {
+  grid-area: ctn;
+  padding: 10px;
+  height: 100%;
+  box-sizing: border-box;
+}
+.content h2 {
+  display: flex;
+  font-size: 1.6em;
+  color: blueviolet;
+}
+/* Nama penulis dibawah judul */
+.content .penulis {
+  font-size: calc(1em - 4px);
+  margin-top: 1px;
+}
+.content .penulis a {
+  color: blueviolet;
+  text-decoration: none;
+}
+.content p {
+  font-family: "Montserrat", sans-serif;
+  margin-top: 20px;
+  text-align: justify;
+}
+/* Ketika cursor diarahkan pada link */
+.content .penulis a:hover {
+  font-size: 1.2em;
+  transition: 0.5s;
+  color: rgb(16, 16, 248);
+  font-weight: bold;
+}
+/* text-indent atau untuk paragraf */
+.content .p1,
+article {
+  text-indent: calc(2em - 6px);
+}
+/* Sidebar  */
+.sidebar {
+  /* font-family: ; */
+  grid-area: sdb;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.sidebar .penulis {
+  text-align: center;
+  color: blueviolet;
+}
+.content h2,
+.sidebar h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+.sidebar article {
+  font-family: "Montserrat", sans-serif;
+  margin-top: 2.5em;
+  /* line-height: 1.2; */
+  text-align: justify;
+}
+/* Footer */
+.footer {
+  padding: calc(1em - 8.4px);
+  color: white;
+  background-color: rgba(51, 51, 51, 0.9);
+}
+.hero > * {
+  display: none;
+}
+.hero {
+  grid-area: h;
+  min-height: 400px;
+  background-image: url(../img/bromo.png);
+  background-size: cover;
+  background-position: center;
+  padding: 50px;
+}
+/* Fitur pada header */
+.features {
+  display: grid;
+  min-height: 200px;
+  background-color: black;
+  color: white;
+  place-content: center;
+  text-align: center;
+}
+.features .ket {
+  font-size: 2em;
+  font-weight: 200;
+}
+.feature-1 {
+  grid-area: f1;
+  background-image: url(../img/laptop.png);
+  background-size: cover;
+  background-position: center;
+}
+.feature-2 {
+  grid-area: f2;
+  background-image: url(../img/bromo.png);
+  background-size: cover;
+  background-position: center;
+}
+.feature-3 {
+  grid-area: f3;
+  background-image: url(../img/bromo.png);
+  background-size: cover;
+  background-position: center;
+}
+.feature-4 {
+  grid-area: f4;
+  background-image: url(../img/laptop.png);
+  background-size: cover;
+  background-position: center;
+}
+/* Menu */
+.menu {
+  order: -1;
+  background: linear-gradient(to left, blueviolet 45%, #ddd 90%);
+  display: grid;
+  padding: 10px;
+  align-items: center;
+  grid-template-columns: 1fr 2fr;
+}
+.menu .judul-menu {
+  font-size: 1.5em;
+  color: #333;
+}
+.menu ul {
+  list-style: none;
+  display: grid;
+  gap: 5px;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+.menu a {
+  text-decoration: none;
+  display: block;
+  background-color: black;
+  border: 1px double rgba(99, 99, 99, 0.867);
+  color: white;
+  text-align: center;
+  padding: 5px;
+  text-transform: uppercase;
+  font-size: 0.9em;
+}
+/* Hamburger menu */
+.menu-toggle {
+  /* margin-right: -60px; */
+  display: none;
+  flex-direction: column;
+  height: 20px;
+  justify-content: space-between;
+  position: relative;
+  z-index: 10;
+}
+.menu-toggle input {
+  position: absolute;
+  width: 40px;
+  height: 28px;
+  left: -6px;
+  top: -3px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+.menu-toggle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 4px;
+  transition: all 0.6s;
+}
+/* Hamburger Menu Animasi */
+.menu-toggle span:nth-child(2) {
+  transform-origin: 0 0;
+}
+.menu-toggle span:last-child {
+  transform-origin: 0 100%;
+}
+.menu-toggle input:checked ~ span:nth-child(2) {
+  background-color: whitesmoke;
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+.menu-toggle input:checked ~ span:nth-child(3) {
+  background-color: whitesmoke;
+  opacity: 0;
+  transform: scale(0);
+}
+.menu-toggle input:checked ~ span:last-child {
+  background-color: whitesmoke;
+  transform: rotate(-45deg) translate(-1px, 0);
+}
+/* Responsif breakpoint */
+/* Desktop */
+@media screen and (max-width: 1024px) {
+  .menu {
+    order: inherit;
+    grid-template-columns: 1fr 2fr;
+  }
+  /* .menu .judul-menu {
+    display: none;
+  } */
+  .hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+  }
+  .hero > * {
+    font-family: "Oswald", cursive;
+    font-weight: 400;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+  }
+}
+/* Tablet */
+@media (max-width: 768px) {
+  .menu {
+    order: -1;
+    justify-items: end;
+  }
+  .menu .judul-menu {
+    display: grid;
+    grid-column: 1/2;
+    grid-row-start: 1;
+  }
+  .menu-toggle {
+    display: flex;
+  }
+  .menu ul {
+    display: flex;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgb(0, 0, 0);
+    flex-direction: column;
+    z-index: 1;
+    transform: translateY(-100%);
+    transition: all 1s;
+    /* opacity: 0; */
+  }
+  .sidebar {
+    border-top: 2px solid whitesmoke;
+  }
+  /* .content{
+    border-top: 2px solid whitesmoke;
+    border-bottom: 2px solid whitesmoke;
+  } */
+  .menu ul.slide {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .content .penulis,
+  .content h2 {
+    justify-content: center;
+    text-align: center;
+  }
+  .contents-sidebar {
+    grid-template-columns: auto;
+    grid-template-areas:
+      "ctn"
+      "sdb";
+  }
+}
+/* Mobile */
+@media screen and (max-width: 600px) {
+  body {
+    margin: 15px;
+  }
+  .header {
+    grid-template-areas:
+      "h"
+      "f1"
+      "f2"
+      "f3"
+      "f4";
+  }
+  .menu {
+    order: -1;
+    grid-template-columns: 1fr 1fr;
+  }
+}

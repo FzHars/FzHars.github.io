@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Web</title>
+    <!-- Font BebasNeue, Montserrat, Italiana, Poppins, Oswald -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Italiana&family=Montserrat&family=Oswald:wght@200;400&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="hero">
+          <h2>Membuat website Sederhana</h2>
+          <p class="sub-heading">Dengan HTML, CSS & JavaScript</p>
+        </div>
+        <div class="features feature-1">
+          <h4 class="ket">My Project</h4>
+          <p class="item">Click Here</p>
+        </div>
+        <div class="features feature-2">
+          <h4 class="ket">Holidays</h4>
+          <p class="item">Click Here</p>
+        </div>
+        <div class="features feature-3">
+          <h4 class="ket">Holidays</h4>
+          <p class="item">Click Here</p>
+        </div>
+        <div class="features feature-4">
+          <h4 class="ket">Holidays</h4>
+          <p class="item">Click Here</p>
+        </div>
+      </header>
+      <nav class="menu">
+        <div class="menu-toggle">
+          <input type="checkbox" />
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="judul-menu">
+          <h1>Latihan web</h1>
+        </div>
+        <ul class="menu-list">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Project</a></li>
+          <li><a href="#">Gallery</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </nav>
+      <section class="contents-sidebar">
+        <div class="content">
+          <h2>Learn Web Html Css And JavaScript</h2>
+          <p class="penulis">
+            ditulis oleh <a href="#pp">Xie</a> pada 7 Januari 2024
+          </p>
+          <p class="p1">
+            Website ini dibuat untuk belajar dan mengolah yang sudah di pelajari
+            seperti HTML dasar, CSS dasar, CSS Layouting, CSS3 dan sebagian
+            kecil CSS Unit. Kekurangan pada web ini tidak menggunakan JavaScript
+            atau lainnya. Karena penulis belum mempelajari hal tersebut. Maka
+            penulis membuat web sesederhana mungkin.
+          </p>
+          <p class="p1">
+            Materi-materi yang digunakan pada web ini adalah untuk HTML seperti
+            paragraf, heading, hyper link, list, image dan lainnya. Untuk CSS
+            dasar seperti selector, penempatan css, background, float, clearfix,
+            pseudo class, text style. Untuk CSS layouting seperti position,
+            z-index, overflow, box model, display. Untuk CSS3 yang sudah
+            digunakan di halaman ini seperti font-face, web-font generator,
+            transition.
+          </p>
+          <p class="p1">
+            Elemen CSS3 lainnya akan digunakan setelah penulis paham betul
+            tentang CSS Unit. Yaitu elemen vh, vw, vmax dan vmin. Pada halaman
+            ini CSS Unit yang digunakan seperti value, em & rem, calc() dan
+            unit. Setelah penulis menguasai CSS Unit secara mendalam. Penuls
+            akan mempelajari Javascript lalu mengimplementasikan-nya dengan
+            membuat web yang lebih interaktif lagi dan mungkiin akan memakan
+            waktu yang cukup lama untuk mempelajarinya dan memahaminya.
+          </p>
+        </div>
+        <div class="sidebar">
+          <h2 class="penulis" id="pp">Tentang Penulis</h2>
+          <!-- <img
+              src="img/aset/inkayacu.jpg"
+              alt="(Tidak ada foto &#128517;)"
+              title="Penulis"
+            /> -->
+          <article>
+            Hai, kenalkan nama saya kucing saya berasal dari kota cirebon. Saya
+            sedang belajar membuat web di pemrograman web. Selama saya belajar
+            ngoding. Banyak sekali error yang saya temukan.Akan tetapi, setelah
+            banyaknya error dan bisa mengatasinya sendiri. Rasanya sangat senang
+            sekali bisa menyelesaikan-nya. Untuk kalian semangat belajar dan
+            jangan lupa jaga kesehatan dan juga sholat tepat waktu &#128516;
+          </article>
+        </div>
+      </section>
+      <footer class="footer">
+        <p class="copy">&copy; Copyright 2023, Fawaz.</p>
+      </footer>
+    </div>
+    <script>
+      const menuToggle = document.querySelector(".menu-toggle input");
+      const nav = document.querySelector("nav ul");
+
+      menuToggle.addEventListener("click", function () {
+        nav.classList.toggle("slide");
+      });
+    </script>
+  </body>
+</html>
