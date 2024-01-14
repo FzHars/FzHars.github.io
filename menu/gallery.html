@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Italiana&family=Montserrat&family=Oswald:wght@200;400&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/sg.css" />
+    <title>Gallery</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="hero">
+          <h2>Gallery</h2>
+          <p class="sub-heading">Find your best image 😉 </p>
+        </div>
+      </header>
+      <nav class="menu">
+        <div class="menu-toggle">
+          <input type="checkbox" />
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="judul-menu">
+          <h1>Gallery</h1>
+        </div>
+        <ul class="menu-list">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="#">Project</a></li>
+          <!-- <li><a href="#">Gallery</a></li> -->
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </nav>
+      <div class="gallery">
+        <div
+          class="card"
+          onclick="showOverlay('../img/hm.jpg', '>_<', '')"
+        >
+          <img src="../img/hm.jpg" alt="" />
+          <div class="card-content ovr">
+            <h3>📸</h3>
+          </div>
+        </div>
+        <div
+          class="card"
+          onclick="showOverlay('https://source.unsplash.com/300x300/?cat', 'Cat', '')"
+        >
+          <img src="https://source.unsplash.com/300x300/?cat" alt="" />
+          <div class="card-content ovr">
+            <h3>🐈</h3>
+          </div>
+        </div>
+        <div
+          class="card"
+          onclick="showOverlay('../img/4.png', '>_<', '')"
+        >
+          <img src="../img/4.png" alt="" />
+          <div class="card-content ovr">
+            <h3>😻</h3>
+          </div>
+        </div>
+        <div
+          class="card"
+          onclick="showOverlay('../img/wkwk4.png', 'Teman', 'Selamat Ulang Tahun Cuy. Panjang umur jadikan pelajaran hidup yang kemarin-kemarin seperti sholat dan lain-lain. Have a great day ')"
+        >
+          <img src="../img/wkwk44.png" alt="" />
+          <div class="card-content ovr">
+            <h3>🎂</h3>
+          </div>
+        </div>
+        <div
+          class="card"
+          onclick="showOverlay('../img/2.png', 'Beautiful', '')"
+        >
+          <img src="../img/2.png" alt="" />
+          <div class="card-content ovr">
+            <h3>🤗</h3>
+          </div>
+        </div>
+        <div
+          class="card"
+          onclick="showOverlay('https://source.unsplash.com/400x400/?Coffee', 'Coffee', '')"
+        >
+          <img src="https://source.unsplash.com/400x400/?Coffee" alt="" />
+          <div class="card-content ovr">
+            <h3>☕</h3>
+          </div>
+        </div>
+        <div
+          class="card"
+          onclick="showOverlay('../img/3.png', 'Beautiful', '')"
+        >
+          <img src="../img/3.png" alt="" />
+          <div class="card-content ovr">
+            <h3>😞</h3>
+          </div>
+        </div>
+        <div
+          class="card"
+          onclick="showOverlay('https://source.unsplash.com/400x400/?Space', 'Space', '')"
+        >
+          <img src="https://source.unsplash.com/400x400/?Space" alt="" />
+          <div class="card-content ovr">
+            <h3>☄️</h3>
+          </div>
+        </div>
+        <div
+          class="card"
+          onclick="showOverlay('https://source.unsplash.com/400x400/?Nature', 'Nature', '')"
+        >
+          <img src="https://source.unsplash.com/400x400/?Nature" alt="" />
+          <div class="card-content ovr">
+            <h3>🏞️</h3>
+          </div>
+        </div>
+        <div
+          class="card"
+          onclick="showOverlay('https://source.unsplash.com/400x400/?Laptop', 'Laptop', '')"
+        >
+          <img src="https://source.unsplash.com/400x400/?Laptop" alt="" />
+          <div class="card-content ovr">
+            <h3>💻</h3>
+          </div>
+        </div>
+        <div class="overlay" id="overlay">
+          <img src="" alt="Overlay Image" id="overlayImage" />
+          <p class="overlay-text" id="overlayText"></p>
+          <button class="btn close" onclick="hideOverlay()">X Close</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/menu.js"></script>
+  </body>
+</html>
